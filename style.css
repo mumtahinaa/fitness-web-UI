@@ -38,7 +38,8 @@
   display: flex;
 }
 
-.paragraph {
+.paragraph,
+.price-details > p {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
   font-weight: 400;
@@ -217,9 +218,9 @@
 
   text-align: center;
 }
-.heading {
+.heading,
+.price-details > h3 {
   color: rgb(255, 255, 255);
-
   font-size: 2.5rem;
   font-weight: 900;
   margin: 0 auto;
@@ -379,6 +380,71 @@ form > select > option {
   border: none;
   margin-top: 40px;
 }
+/* prices */
+.price-section {
+  margin-bottom: 100px;
+}
+.price-details {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 667px;
+}
+.card-container {
+  display: flex;
+  /* border: 1px solid red; */
+  justify-content: space-between;
+  max-width: 1060px;
+  margin: 80px auto;
+}
+.card {
+  background: rgb(34, 34, 34);
+  border-radius: 18px;
+  /* border: 1px solid red; */
+  padding: 20px;
+  width: 250px;
+  box-shadow: 2px 2px 2px 2px rgb(230, 83, 60);
+}
+.card > p,
+.card > ul > li {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.card > ul > li {
+  line-height: 300%;
+  list-style: none;
+}
+.card > .basic {
+  color: rgb(230, 83, 60);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.dollar {
+  font-size: 2rem;
+  font-weight: 900;
+  color: rgb(255, 255, 255);
+}
+.card > button {
+  color: rgb(255, 255, 255);
+  font-size: 1.12rem;
+  font-weight: 600;
+  border-radius: 42px;
+  background: rgb(230, 83, 60);
+  padding: 12px 32px;
+  border: none;
+  border: 1px solid red;
+  margin-left: 30px;
+}
+.card-1 > button {
+  margin-top: 70px;
+}
+.card-2 {
+  transform: scale(1.2);
+}
+.card:hover {
+  transform: scale(1.2);
+}
+
 /* meet team */
 .meet-team {
   max-width: 1060px;
@@ -387,7 +453,6 @@ form > select > option {
 .child-1 {
   max-width: 671px;
   text-align: center;
-
   margin: 0 auto;
 }
 .trainers-photo {
@@ -645,5 +710,36 @@ footer {
     flex-direction: column;
     padding: 0 20px 50px 20px;
     margin-top: 20px;
+  }
+  /* .card-container {
+    flex-direction: column;
+    border: 1px solid red;
+  } */
+  .card-container {
+    overflow-x: scroll;
+    /* justify-content: space-between; */
+    /* padding: 0 20px; */
+    width: 90%;
+    /* animation: card 12s infinite; */
+  }
+  .card:hover {
+    transform: none;
+  }
+  .card {
+    width: 80%;
+    flex-shrink: 0;
+    margin-right: 20px;
+    margin-bottom: 50px;
+    transition: scale(1) 0.5s ease;
+  }
+  .card-2 {
+    transform: none;
+    /* margin-top: 30px; */
+  }
+  .card-2 > ul {
+    margin-bottom: 40px;
+  }
+  .card > button {
+    margin-left: 50px;
   }
 }
