@@ -5,11 +5,11 @@
   font-style: normal;
 }
 @font-face {
-  font-family: "Miama";
-  src: url(./fonts/Miama.otf);
+  font-family: "spell";
+  src: url(./fonts/spell.ttf);
 }
 #shape {
-  font-family: "Miama";
+  font-family: "spell";
   font-size: 8rem;
   font-weight: 400;
 }
@@ -37,6 +37,7 @@
 .nav-flex {
   display: flex;
 }
+
 .paragraph {
   color: rgba(255, 255, 255, 0.5);
   font-size: 0.8rem;
@@ -298,15 +299,95 @@
 .runner > img {
   width: 100%;
 }
+/* BMI */
+
+.BMI {
+  max-width: 471px;
+  margin: 0 auto;
+}
+.BMI-container {
+  margin: 88px 0;
+  max-width: 1440px;
+  min-height: 500px;
+  background: rgb(34, 34, 34);
+  display: flex;
+  justify-content: space-evenly;
+}
+.chart > h6,
+.clac > h6 {
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.clac > p {
+  margin-top: -40px;
+  margin-bottom: 40px;
+}
+.content {
+  border-collapse: collapse;
+  width: 100%;
+}
+.content,
+th,
+td {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: left;
+  padding: 12px;
+}
+.content,
+th {
+  color: rgb(255, 255, 255);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+.content,
+td {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.8rem;
+  font-weight: 300;
+}
+form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  min-height: 168px;
+}
+form > input,
+select {
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  padding: 10px 1px 10px 15px;
+}
+form > select {
+  color: rgba(255, 255, 255, 0.3);
+}
+form > select > option {
+  color: black;
+}
+
+#item-5 {
+  grid-column: 1 / span 2;
+}
+.clac > button {
+  color: rgb(255, 255, 255);
+  font-size: 1.12rem;
+  font-weight: 600;
+  border-radius: 42px;
+  background: rgb(230, 83, 60);
+  padding: 12px 32px;
+  border: none;
+  margin-top: 40px;
+}
+/* meet team */
 .meet-team {
   max-width: 1060px;
   margin: 0 auto;
-  border: 1px solid red;
 }
 .child-1 {
   max-width: 671px;
   text-align: center;
-  border: 1px solid red;
+
   margin: 0 auto;
 }
 .trainers-photo {
@@ -316,28 +397,82 @@
   background: rgba(255, 255, 255, 0.1);
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  border: 1px solid red;
+
   gap: 20px;
   padding: 20px;
   margin-top: 55px;
 }
-.trainer-parent {
-  position: relative;
-}
+
 .trainer-img {
-  border: 1px solid red;
   width: 100%;
 }
 .info {
-  position: absolute;
   line-height: 50%;
-  top: 220px;
-  left: 20px;
+  margin-top: -55px;
+  margin-left: 20px;
 }
 .info > span {
   font-size: 1.2rem;
   font-weight: 900;
   color: #ffffff;
+}
+/* footer section */
+footer {
+  min-height: 470px;
+  background: rgba(255, 255, 255, 0.1);
+  margin-top: 80px;
+  padding-top: 30px;
+}
+.border {
+  max-width: 1059px;
+  min-height: 249px;
+  display: flex;
+  justify-content: space-between;
+  /* border: 1px solid red; */
+  margin: 70px auto;
+}
+.footer-b-1 {
+  max-width: 443px;
+  /* border: 1px solid red; */
+}
+.footer-b-1 > h3 {
+  color: rgb(230, 83, 60);
+  font-size: 4rem;
+  font-weight: 800;
+  /* border: 1px solid red; */
+  margin-bottom: 15px;
+  margin-top: 0px;
+}
+.footer-b-1 > p {
+  /*border: 1px solid red; */
+  line-height: 200%;
+}
+.footer-b-2 > span {
+  color: rgb(255, 255, 255);
+  font-size: 1.7rem;
+  font-weight: 700;
+}
+.footer-b-2 > ul > li > a {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 1rem;
+  font-weight: 400;
+  text-decoration: none;
+  line-height: 200%;
+}
+.footer-b-2 > ul > li {
+  list-style: none;
+}
+.border-top {
+  border-top: 2px solid rgba(255, 255, 255, 0.1);
+  max-width: 1059px;
+  margin: 0 auto;
+  /* border: 1px solid red; */
+}
+.border-top > h6 {
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
 }
 /* media query */
 @media screen and (max-width: 576px) {
@@ -484,5 +619,32 @@
   }
   .design-sec {
     margin: 0 20px;
+  }
+  .trainers-photo {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .meet-team {
+    margin: 60px 20px;
+  }
+  .border {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .border-top {
+    margin: 0 20px;
+    padding-left: 0;
+  }
+  .border-top > h6 {
+    text-align: left;
+    padding-bottom: 20px;
+  }
+  .BMI {
+    margin: 60px 20px;
+    line-height: 200%;
+  }
+  .BMI-container {
+    flex-direction: column;
+    padding: 0 20px 50px 20px;
+    margin-top: 20px;
   }
 }
